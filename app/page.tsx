@@ -35,7 +35,7 @@ export default function Home() {
       </div>
 
       <div className={styles.grid}>
-        {blocks.map((value) => (<Block key={value} value={value}/>))}
+        {blocks.map((value) => (<Block key={value} value={value} position={[0,0]}/>))}
       </div>
     </main>
   )

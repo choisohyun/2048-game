@@ -27,7 +27,7 @@ export const useGame = () => {
 
     // A must-have to keep the sliding animation if the action merges tiles together.
     const throttledMergeTile = (source: BlockType, destination: BlockType) => {
-        setTimeout(() => mergeTile(source, destination), animationDuration);
+        setTimeout(() => mergeTile(source, destination), 100);
     };
 
     const updateTile = (tile: BlockType) => {
@@ -44,7 +44,7 @@ export const useGame = () => {
     const retrieveTileMap = useCallback(() => {
         const tileMap = new Array(
             4 * 4
-        ).fill(0) as number[];
+        ).fill('0');
 
         byIds.forEach((id) => {
             const { position } = tiles[id];
